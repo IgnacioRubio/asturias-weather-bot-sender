@@ -1,2 +1,3 @@
-# asturias-time-bot-sender
-Service to send information about time in Asturias
+# Asturias Time Bot Sender
+
+Service to send information about time in Asturias.
