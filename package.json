@@ -1,0 +1,32 @@
+{
+  "name": "asturias-weather-bot-sender",
+  "version": "1.0.0",
+  "description": "Service to send information about Weather in Asturias",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioRubio/asturias-weather-bot-sender.git"
+  },
+  "keywords": [
+    "SENDER",
+    "TWITTER",
+    "NODEJS"
+  ],
+  "author": "Ignacio Rubio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IgnacioRubio/asturias-weather-bot-sender/issues"
+  },
+  "homepage": "https://github.com/IgnacioRubio/asturias-weather-bot-sender#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-emoji": "^1.10.0",
+    "node-schedule": "^1.3.2",
+    "superagent": "^5.2.2",
+    "twitter": "^1.7.1"
+  }
+}

@@ -1,3 +1,3 @@
-# Asturias Time Bot Sender
+# Asturias Weather Bot Sender
 
-Service to send information about time in Asturias.
+Service to send information about Weather in Asturias.
