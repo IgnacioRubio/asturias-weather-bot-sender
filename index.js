@@ -6,34 +6,14 @@ const emoji = require('node-emoji')
 const Forecasting = require('./src/services/forecasting');
 const Email = require('./src/services/email');
 
+const STATE_SKIES_EMOJIS = require('./src/var/state-skies-emojis');
+
+
+
 // global variables
 const MONTH_NAMES = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
 
-const TIME_RANGE = { "madrugada": "00:00-06:00", "mañana": "06:00-12:00", "tarde": "12:00-18:00", "noche": "18:00-24:00" }
-
-const STATE_SKIES_EMOJIS = { 
-  "Cielo despejado": "sunny",
-  "Nubes altas": "mostly_sunny",
-  "Poco nuboso": "partly_sunny",
-  "Intervalos nubosos": "partly_sunny",
-  "Niebla": "fog",
-  "Bruma": "fog",
-  "Nuboso": "barely_sunny",
-  "Cubierto": "cloud",
-  "Muy nuboso": "cloud",
-  "Intervalos nubosos": "partly_sunny",
-  "Intervalos nubosos con lluvia escasa": "partly_sunny",
-  "Intervalos nubosos con lluvia": "partly_sunny",
-  "Cubierto con lluvia escasa": "sun_behind_rain_cloud",
-  "Cubierto con lluvia": "rain_cloud",
-  "Nuboso con lluvia escasa": "rain_cloud",
-  "Cubierto con tormenta": "rain_cloud",
-  "Nuboso con lluvia": "rain_cloud",
-  "Nuboso con tormenta": "lightning",
-  "Muy nuboso con tormenta": "lightning",
-  "Muy nuboso con lluvia escasa": "rain_cloud",
-  "Muy nuboso con lluvia": "rain_cloud"
-};
+const TIME_RANGE = { "madrugada": "00:00-06:00", "mañana": "06:00-12:00", "tarde": "12:00-18:00", "noche": "18:00-24:00" };
 
 
 // twitter client
