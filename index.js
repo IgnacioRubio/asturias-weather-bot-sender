@@ -26,8 +26,11 @@ const STATE_SKIES_EMOJIS = {
   "Intervalos nubosos con lluvia": "partly_sunny",
   "Cubierto con lluvia escasa": "sun_behind_rain_cloud",
   "Cubierto con lluvia": "rain_cloud",
-  "Nuboso con lluvia": "rain_cloud",
   "Nuboso con lluvia escasa": "rain_cloud",
+  "Cubierto con tormenta": "rain_cloud",
+  "Nuboso con lluvia": "rain_cloud",
+  "Nuboso con tormenta": "lightning",
+  "Muy nuboso con tormenta": "lightning",
   "Muy nuboso con lluvia escasa": "rain_cloud",
   "Muy nuboso con lluvia": "rain_cloud"
 };
