@@ -1,4 +1,6 @@
 require('dotenv').config();
+require('./src/util/env');
+
 const schedule = require('node-schedule');
 const Twitter = require('twitter');
 const emoji = require('node-emoji')
