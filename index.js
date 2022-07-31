@@ -6,7 +6,7 @@ const Twitter = require('twitter');
 const emoji = require('node-emoji')
 
 const Forecasting = require('./src/services/forecasting');
-const Email = require('./src/services/email');
+// const Email = require('./src/services/email');
 
 const STATE_SKIES_EMOJIS = require('./src/var/state-skies-emojis');
 
@@ -56,16 +56,16 @@ async function tweet() {
       const msgHeader = `El tiempo para mañana ${tomDay} de ${tomMonth} en #${forecast.municipalityName}:`;
 
       console.log('DAWN - ' + forecast.stateSkies[3].descripcion);
-      const msgDawn = `${emoji.get('stopwatch')}${TIME_RANGE['madrugada']} ${emoji.get('thermometer')}${forecast.temperatures[0].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[3].descripcion])} ${forecast.precipitations[3].value}%`;
+      const msgDawn = `${emoji.get('stopwatch')}${TIME_RANGE['madrugada']} ${emoji.get('thermometer')}${forecast.temperatures[0].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[3].descripcion.trim()])} ${forecast.precipitations[3].value}%`;
 
       console.log('MORNING - ' + forecast.stateSkies[4].descripcion);
-      const msgMorning = `${emoji.get('stopwatch')}${TIME_RANGE['mañana']} ${emoji.get('thermometer')}${forecast.temperatures[1].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[4].descripcion])} ${forecast.precipitations[4].value}%`;
+      const msgMorning = `${emoji.get('stopwatch')}${TIME_RANGE['mañana']} ${emoji.get('thermometer')}${forecast.temperatures[1].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[4].descripcion.trim()])} ${forecast.precipitations[4].value}%`;
 
       console.log('AFTERNOON- ' + forecast.stateSkies[5].descripcion);
-      const msgAfternoon = `${emoji.get('stopwatch')}${TIME_RANGE['tarde']} ${emoji.get('thermometer')}${forecast.temperatures[2].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[5].descripcion])} ${forecast.precipitations[5].value}%`;
+      const msgAfternoon = `${emoji.get('stopwatch')}${TIME_RANGE['tarde']} ${emoji.get('thermometer')}${forecast.temperatures[2].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[5].descripcion.trim()])} ${forecast.precipitations[5].value}%`;
 
       console.log('NIGHT- ' + forecast.stateSkies[6].descripcion);
-      const msgNight = `${emoji.get('stopwatch')}${TIME_RANGE['noche']} ${emoji.get('thermometer')}${forecast.temperatures[3].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[6].descripcion])} ${forecast.precipitations[6].value}%`;
+      const msgNight = `${emoji.get('stopwatch')}${TIME_RANGE['noche']} ${emoji.get('thermometer')}${forecast.temperatures[3].value}ºC  ${emoji.get(STATE_SKIES_EMOJIS[forecast.stateSkies[6].descripcion.trim()])} ${forecast.precipitations[6].value}%`;
 
       // message completed
       const msgComplete = `${msgHeader}\n\n   ${msgDawn}\n   ${msgMorning}\n   ${msgAfternoon}\n   ${msgNight}`;
@@ -80,7 +80,7 @@ async function tweet() {
       text: err.toString()
     };
     
-    Email.send(msg);
+    // Email.send(msg);
 
     // log error
     console.error(err);
